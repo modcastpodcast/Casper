@@ -27,10 +27,11 @@
                 {{#if @site.twitter}}
                     <a class="social-link social-link-tw" href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
                 {{/if}}
-            </div>
-            {{#unless @labs.members}}
+
+                <a class="social-link social-link-tw" id="twitch-url" title="Twitch" target="_blank" rel="noopener">{{> "icons/twitch"}}</a>
+                <a class="social-link social-link-tw" id="discord-url" title="Twitch" target="_blank" rel="noopener">{{> "icons/discord"}}</a>
                 <a class="rss-button" href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
-            {{/unless}}
+            </div>
         {{/if}}
 
         {{#if @labs.members}}
@@ -38,3 +39,21 @@
         {{/if}}
     </div>
 </nav>
+
+{{#contentFor "scripts"}}
+<script>
+    $(document).ready(function () {
+      if (window.twitchAccount) {
+        document.getElementById("twitch-url").href = window.twitchAccount;
+      } else {
+        document.getElementById("twitch-url").style = "display: none;"
+      }
+
+      if (window.discordInvite) {
+        document.getElementById("discord-url").href = window.discordInvite;
+      } else {
+        document.getElementById("discord-url").style = "display: none;"
+      }
+    });
+</script>
+{{/contentFor}}
