@@ -1,0 +1,9 @@
+version: "1"
+rules:
+  - base: master
+    upstream: TryGhost:master
+    mergeMethod: merge
+    reviewers:
+      - j03b
+    conflictReviewers:
+      - j03b
