@@ -43,13 +43,13 @@
     {{!-- The big email subscribe modal content --}}
     {{#if @labs.members}}
     <div class="subscribe-success-message">
-        <a class="subscribe-close" href="javascript:;"></a>
+        <a class="subscribe-close" href="javascript:;" title="Close subscription notification" aria-label="Close subscription notification"></a>
         You've successfully subscribed to {{@site.title}}!
     </div>
 
     <div id="subscribe" class="subscribe-overlay">
-        <a class="subscribe-close-overlay" href="#"></a>
-        <a class="subscribe-close-button" href="#"></a>
+        <a class="subscribe-close-overlay" href="#" aria-hidden="true"></a>
+        <a class="subscribe-close-button" href="#" title="Close subscription notification" aria-label="Close subscription notification"></a>
         <div class="subscribe-overlay-content">
             {{#if @site.logo}}
                 <img class="subscribe-overlay-logo" src="{{@site.logo}}" alt="{{@site.title}}" />
