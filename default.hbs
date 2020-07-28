@@ -149,7 +149,7 @@
             var gaProperty = 'UA-173299391-1';
             var disableStr = 'ga-disable-' + gaProperty;
 
-            if ((document.cookie.indexOf(disableStr + '=true') > -1) || (document.cookie.indexOf(disableStr + '=false') > -1)) {
+            if (window[disableStr]) {
               dismissCookie();
             }
         });
