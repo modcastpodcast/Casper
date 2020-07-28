@@ -39,8 +39,9 @@
 
         function gaOptin() {
           document.cookie = disableStr + '=false; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
-          dismissCookie();
           window[disableStr] = false;
+          dismissCookie();
+          document.location.reload();
         }
 
         function dismissCookie() {
