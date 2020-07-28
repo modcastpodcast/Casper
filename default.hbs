@@ -31,16 +31,17 @@
         function gaOptout() {
           document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
           window[disableStr] = true;
+          dismissCookie();
           document.location.reload();
         }
 
         function gaOptin() {
           document.cookie = disableStr + '=false; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+          dismissCookie();
           window[disableStr] = false;
         }
 
         function dismissCookie() {
-          gaOptin();
           document.querySelector("#cookie-holder").style.display = "none";
         }
     </script>
