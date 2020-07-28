@@ -35,6 +35,7 @@
         }
 
         function dismissCookie() {
+          gaOptin();
           document.querySelector("#cookie-holder").style.display = "none";
         }
     </script>
@@ -46,7 +47,7 @@
 <body class="{{body_class}}">
 
     <div class="cookie-holder" id="cookie-holder">
-      <p class="cookie-message">We use cookies to enhance the Modcast. For more information please <a href="/cookies">click here</a>.</p>
+      <p class="cookie-message">We use cookies to enhance the Modcast. For more information please <a href="/cookies" title="Cookie information document">click here</a>. By dismissing this message you are consenting to our use of cookies outlined in the cookies document.</p>
       <a class="cookie-dismiss" onclick="dismissCookie()" title="Dismiss cookie bar">&times;</a>
     </div>
 
