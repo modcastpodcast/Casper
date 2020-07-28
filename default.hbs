@@ -19,12 +19,14 @@
         var gaProperty = 'UA-173299391-1';
         var disableStr = 'ga-disable-' + gaProperty;
 
-        if (document.cookie.indexOf(disableStr + '=true') > -1) {
-          window[disableStr] = true;
-        }
+        window[disableStr] = true;
 
         if (document.cookie.indexOf(disableStr + '=false') > -1) {
           window[disableStr] = false;
+        }
+
+        if ((document.cookie.indexOf(disableStr + '=false') > -1) && (document.cookie.indexOf(disableStr + '=true') > -1)) {
+          window["needsCookieModal"] = true;
         }
 
         // Opt-out function
@@ -53,8 +55,9 @@
 <body class="{{body_class}}">
 
     <div class="cookie-holder" id="cookie-holder">
-      <p class="cookie-message">We use cookies to enhance the Modcast. For more information please read our <a href="/cookies">cookie information document</a>. By dismissing this message you are consenting to our use of cookies outlined in the cookies document.</p>
-      <a class="cookie-dismiss" onclick="gaOptin()" title="Dismiss cookie bar">&times;</a>
+      <p class="cookie-message">We use cookies to enhance the Modcast. For more information please read our <a href="/cookies">cookie information document</a>.</p>
+      <a class="cookie-dismiss accept" onclick="gaOptin()">Accept analytics cookies</a>
+      <a class="cookie-dismiss reject" onclick="gaOptout()">Reject analytics cookies</a>
     </div>
 
     <div class="site-wrapper">
@@ -156,7 +159,7 @@
             var gaProperty = 'UA-173299391-1';
             var disableStr = 'ga-disable-' + gaProperty;
 
-            if (window[disableStr] || window[disableStr] === false) {
+            if (window["needsCookieModal") {
               dismissCookie();
             }
         });
