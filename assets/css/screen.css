@@ -3086,4 +3086,18 @@ Usage (In Ghost editor):
   width: 100%;
   background-color: black;
   color: white;
+  padding-top: 1.5em;
+  z-index: 1000;
+}
+
+.cookie-holder .cookie-message {
+  display: inline;
+}
+
+.cookie-holder .cookie-dismiss {
+  float: right;
+  padding-right: 10px;
+  font-size: 2em;
+  color: white;
+  margin-bottom: 0.7em;
 }
