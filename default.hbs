@@ -25,7 +25,7 @@
           window[disableStr] = false;
         }
 
-        if ((document.cookie.indexOf(disableStr + '=false') > -1) && (document.cookie.indexOf(disableStr + '=true') > -1)) {
+        if ((document.cookie.indexOf(disableStr + '=false') > -1) || (document.cookie.indexOf(disableStr + '=true') > -1)) {
           window["needsCookieModal"] = true;
         }
 
