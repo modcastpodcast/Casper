@@ -33,6 +33,10 @@
           document.cookie = disableStr + '=false; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
           window[disableStr] = false;
         }
+
+        function dismissCookie() {
+          document.querySelector("#cookie-holder").display = "none";
+        }
     </script>
 
     {{!-- This tag outputs SEO meta+structured data and other important settings --}}
@@ -41,9 +45,9 @@
 </head>
 <body class="{{body_class}}">
 
-    <div class="cookie-holder">
+    <div class="cookie-holder" id="cookie-holder">
       <p class="cookie-message">We use cookies to enhance the Modcast. For more information please <a href="/cookies">click here</a>.</p>
-      <a class="cookie-dismiss">&times;</a>
+      <a class="cookie-dismiss" onclick="dismissCookie()" title="Dismiss cookie bar">&times;</a>
     </div>
 
     <div class="site-wrapper">
@@ -141,6 +145,13 @@
                 $('.subscribe-overlay form').removeClass();
                 $('.subscribe-email').val('');
             });
+
+            var gaProperty = 'UA-173299391-1';
+            var disableStr = 'ga-disable-' + gaProperty;
+
+            if ((document.cookie.indexOf(disableStr + '=true') > -1) || (document.cookie.indexOf(disableStr + '=false') > -1)) {
+              dismissCookie();
+            }
         });
     </script>
 
