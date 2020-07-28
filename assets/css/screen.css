@@ -3089,13 +3089,15 @@ Usage (In Ghost editor):
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 4em;
 }
 
 .cookie-holder .cookie-message {
   padding-right: 10%;
   padding-left: 10%;
   margin: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .cookie-holder .cookie-dismiss {
