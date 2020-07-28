@@ -3077,3 +3077,13 @@ Usage (In Ghost editor):
         color: color-mod(var(--green) l(+5%) s(-5%));
     }
 }
+
+.cookie-holder {
+  left: 0;
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+}
