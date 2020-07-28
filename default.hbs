@@ -46,6 +46,10 @@
         function dismissCookie() {
           document.querySelector("#cookie-holder").style.display = "none";
         }
+
+        function showCookie() {
+          document.querySelector("#cookie-holder").style.display = "flex";
+        }
     </script>
 
     {{!-- This tag outputs SEO meta+structured data and other important settings --}}
@@ -159,8 +163,8 @@
             var gaProperty = 'UA-173299391-1';
             var disableStr = 'ga-disable-' + gaProperty;
 
-            if (window["hasSetCookies"]) {
-              dismissCookie();
+            if (!window["hasSetCookies"]) {
+              showCookie();
             }
         });
     </script>

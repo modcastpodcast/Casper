@@ -3086,7 +3086,7 @@ Usage (In Ghost editor):
   background-color: black;
   color: white;
   z-index: 1000;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
 }
