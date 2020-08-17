@@ -13,8 +13,8 @@ jobs:
           api-url: ${{ secrets.GHOST_ADMIN_API_URL }}
           api-key: ${{ secrets.GHOST_ADMIN_API_KEY }}
 
-    - name: Purge cache
-      uses: jakejarvis/cloudflare-purge-action@master
-      env:
-        CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
-        CLOUDFLARE_TOKEN: ${{ secrets.CLOUDFLARE_TOKEN }}
+      - name: Purge cache
+        uses: jakejarvis/cloudflare-purge-action@master
+        env:
+          CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
+          CLOUDFLARE_TOKEN: ${{ secrets.CLOUDFLARE_TOKEN }}
