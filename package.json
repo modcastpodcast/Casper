@@ -46,7 +46,7 @@
     "bugs": "https://github.com/TryGhost/Casper/issues",
     "contributors": "https://github.com/TryGhost/Casper/graphs/contributors",
     "devDependencies": {
-        "@tryghost/release-utils": "0.6.6",
+        "@tryghost/release-utils": "0.6.7",
         "autoprefixer": "10.0.0",
         "beeper": "2.0.0",
         "cssnano": "4.1.10",
@@ -54,7 +54,7 @@
         "gulp": "4.0.2",
         "gulp-concat": "2.6.1",
         "gulp-livereload": "4.0.2",
-        "gulp-postcss": "8.0.0",
+        "gulp-postcss": "9.0.0",
         "gulp-uglify": "3.0.2",
         "gulp-zip": "5.0.2",
         "inquirer": "7.3.3",
